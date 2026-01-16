@@ -6,7 +6,9 @@ from app import app
 from models import db, Newsletter
 
 with app.app_context():
-    
+
+    db.create_all()
+
     fake = Faker()
 
     Newsletter.query.delete()
